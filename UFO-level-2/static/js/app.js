@@ -25,6 +25,7 @@ button.on("click", function () {
     // Print the value to the console
     console.log(inputValue);
 
+    // Add multiple criteria to filter function 
     var filterData = tableData.filter(report => report.datetime === inputValue ||
         report.city === inputValue ||
         report.state === inputValue ||
