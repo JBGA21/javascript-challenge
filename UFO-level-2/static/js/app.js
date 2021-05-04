@@ -33,6 +33,7 @@ button.on("click", function () {
         report.shape === inputValue);
     console.log(filterData);
 
+    // Add table according to the filter selected
     filterData.forEach(function (dateData) {
         console.log(dateData);
         var row = tableBody.append("tr");
