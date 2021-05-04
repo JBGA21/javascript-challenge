@@ -18,6 +18,7 @@ tableData.forEach((report) => {
 // Button Selection
 var button = d3.select("#filter-btn");
 
+// create the button function
 button.on("click", function () {
     tableBody.html("");
     // Select the input element and get the raw HTML node
