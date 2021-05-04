@@ -25,7 +25,11 @@ button.on("click", function () {
     // Print the value to the console
     console.log(inputValue);
 
-    var filterData = tableData.filter(report => report.datetime === inputValue);
+    var filterData = tableData.filter(report => report.datetime === inputValue ||
+        report.city === inputValue ||
+        report.state === inputValue ||
+        report.country === inputValue ||
+        report.shape === inputValue);
     console.log(filterData);
 
     filterData.forEach(function (dateData) {
