@@ -3,17 +3,30 @@ var tableData = data;
 var tableBody = d3.select('tbody')
 
 // YOUR CODE HERE!
-function buildTable(data) {
-    data.forEach((rowData) => {
-        const row = tableBody.append("tr")
+console.log(tableData);
 
+tableData.forEach((report) => {
+    let newtr = tableBody.append("tr");
+    let entries = Object.entries(report);
+    entries.forEach(([key, value]) => {
+        newtr.append("td").text(`${value}`);
     });
-}
+})
 
-function handleClick() {
 
-}
+var button = d3.select("#filter-btn");
 
-d3.selectAll("#filter-btn").on('click', handleClick)
+button.on("click", function () {
+    tableBody.html("");
+    var inputElement = d3.select("#datetime");
+    var inputValue = inputElement.property("value");
+    console.log(inputValue);
+    var filterData = tableData.filter(report => report.datetime === inputValue);
+    console.log(filterData);
+})
 
-buildTable(tableData)
+//}
+
+//d3.selectAll("#filter-btn").on('click', handleClick)
+
+//buildTable(tableData)
