@@ -40,6 +40,7 @@ button.on("click", function () {
         var row = tableBody.append("tr");
         Object.entries(dateData).forEach(function ([key, value]) {
             console.log(key, value);
+            // add the table data to the cell
             var cell = row.append("td");
             cell.text(value);
         });
