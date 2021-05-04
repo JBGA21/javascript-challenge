@@ -44,7 +44,3 @@ button.on("click", function () {
 });
 
 //}
-
-//d3.selectAll("#filter-btn").on('click', handleClick)
-
-//buildTable(tableData)
