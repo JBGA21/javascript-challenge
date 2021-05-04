@@ -5,6 +5,7 @@ var tableBody = d3.select('tbody')
 // YOUR CODE HERE!
 console.log(tableData);
 
+// Loop through the data and fill a table
 tableData.forEach((report) => {
     let newtr = tableBody.append("tr");
     let entries = Object.entries(report);
