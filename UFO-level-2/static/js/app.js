@@ -36,6 +36,7 @@ button.on("click", function () {
     // Add table according to the filter selected
     filterData.forEach(function (dateData) {
         console.log(dateData);
+        // create the table row 
         var row = tableBody.append("tr");
         Object.entries(dateData).forEach(function ([key, value]) {
             console.log(key, value);
